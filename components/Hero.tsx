@@ -6,22 +6,9 @@ import { urlFor } from '../sanity';
 import { PageInfo } from '../typings';
 import BackgroundCircles from './BackgroundCircles';
 
-type Props = {
-    title: String,
-    section: any
-}
-
 type APIProps = {
     pageInfo: PageInfo
 }
-
-const SectionButton = ({ title, section }: Props) => (
-    <Link href={section}>
-        <button className='heroButton'>
-            {title}
-        </button>
-    </Link>
-)
 
 const Hero = ({ pageInfo }: APIProps) => {
     const [ text, count ] = useTypewriter({
@@ -47,10 +34,26 @@ const Hero = ({ pageInfo }: APIProps) => {
             </h1>
 
             <div className='pt-5'>
-                <SectionButton section='#about' title='About' />
-                <SectionButton section='#experience' title='Experience' />
-                <SectionButton section='#skills' title='Skills' />
-                <SectionButton section='#projects' title='Projects' />
+                <Link href='#about'>
+                    <button className='heroButton'>
+                        About
+                    </button>
+                </Link>
+                <Link href='#experience'>
+                    <button className='heroButton'>
+                        Experience
+                    </button>
+                </Link>
+                <Link href='#skills'>
+                    <button className='heroButton'>
+                        Skills
+                    </button>
+                </Link>
+                <Link href='#projects'>
+                    <button className='heroButton'>
+                        Projects
+                    </button>
+                </Link>
             </div>
         </div>
     </div>
