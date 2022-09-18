@@ -19,7 +19,10 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'url',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
     },
   ],
 

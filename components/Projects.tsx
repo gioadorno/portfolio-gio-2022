@@ -55,7 +55,7 @@ const Projects = ({projects}: Props) => {
 
                 <div className='flex items-center space-x-2 justify-center'>
                     {project?.technologies.map((technology, i) => (
-                        <img className='h-10 w-10' key={technology._id} src={technology.image} />
+                        <img className='h-10 w-10' key={technology._id} src={urlFor(technology.image).url()} />
                     ))}
 
                 </div>

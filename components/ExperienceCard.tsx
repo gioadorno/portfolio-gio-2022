@@ -39,7 +39,7 @@ const ExperienceCard = ({ experience }: Props) => {
                     <img 
                         key={technology._id}
                         className='h-10 w-10 rounded-full'
-                        src={technology.image}
+                        src={urlFor(technology.image).url()}
                     />
                 ))}
                 {/* Tech used */}

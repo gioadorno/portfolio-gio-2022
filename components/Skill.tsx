@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import React from 'react'
+import { urlFor } from '../sanity'
 import { Skill } from '../typings'
 
 type Props = {
@@ -17,7 +18,7 @@ const Skill = ({ directionLeft, skill }: Props) => {
         }}
         transition={{ duration: 1.25 }}
         whileInView={{ opacity: 1, x: 0 }}
-        src={skill.image}
+        src={urlFor(skill.image).url()}
         className='rounded-full border border-gray-500 object-scale-down w-24 h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:brightness-[35%] group-hover:blur-[1px] group-hover:border-orange-500 group-hover:border-opacity-50 group-hover:scale-110 transition duration-300 ease-in-out'
         />
 
