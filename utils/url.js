@@ -1,1 +1,1 @@
-export const apiURL = 'http://localhost:3000/' || 'https://www.gio-portfolio.com/';
+export const apiURL = 'http://localhost:3000/'||'portfolio-gio.netlify.app';
