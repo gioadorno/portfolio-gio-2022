@@ -1,5 +1,5 @@
 import { ChevronUpIcon } from '@heroicons/react/24/solid'
-import type { GetStaticProps } from 'next'
+import type { GetServerSideProps, GetStaticProps } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import About from '../components/About'
@@ -96,7 +96,7 @@ const Home = ({ pageInfo, experiences, skills, socials, projects }: APIProps) =>
 export default Home
 
 
-export const getStaticProps: GetStaticProps<APIProps> = async () => {
+export const getServerSideProps: GetServerSideProps<APIProps> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
   const experiences: Experience[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();
