@@ -35,11 +35,11 @@ const ExperienceCard = ({ experience }: Props) => {
             <h4 className='text-4xl font-light'>Software Engineer</h4>
             <p className='fot-bold text-2xl mt-1'>Valor Enterpries</p>
             <div className='flex space-x-2 my-2'>
-                {experience.technologies.map((technology) => (
+                {experience?.technologies?.map((technology) => (
                     <img 
                         key={technology._id}
                         className='h-10 w-10 rounded-full'
-                        src={urlFor(technology.image).url()}
+                        src={urlFor(technology?.image).url()}
                     />
                 ))}
                 {/* Tech used */}

@@ -28,10 +28,10 @@ const Header = ({ socials }: Props) => {
         }}
         >
             {/* Social Icons */}
-            {socials.map((social) => (
+            {socials?.map((social) => (
                 <SocialIcon 
-                key={social._id}
-                url={social.url} 
+                key={social?._id}
+                url={social?.url} 
                 className='hover:scale-105 transform ease-in duration-200 hover:drop-shadow-lg cursor-pointer' 
                 fgColor='orange' 
                 bgColor='transparent'

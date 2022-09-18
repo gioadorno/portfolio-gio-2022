@@ -50,12 +50,12 @@ const Projects = ({projects}: Props) => {
                 </Link>
                 <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
                     <h4 className='text-4xl font-semibold text-center'>
-                        <span className='underline decoration-orange-300/50 '>Case Study {i+1} of {projects.length}:</span> {project?.title}
+                        <span className='underline decoration-orange-300/50 '>Case Study {i+1} of {projects?.length}:</span> {project?.title}
                     </h4>
 
                 <div className='flex items-center space-x-2 justify-center'>
                     {project?.technologies.map((technology, i) => (
-                        <img className='h-10 w-10' key={technology._id} src={urlFor(technology.image).url()} />
+                        <img className='h-10 w-10' key={technology?._id} src={urlFor(technology?.image).url()} />
                     ))}
 
                 </div>
