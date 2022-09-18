@@ -14,7 +14,7 @@ import { fetchExperiences } from '../utils/fetchExperiences'
 import { fetchPageInfo } from '../utils/fetchPageInfo'
 import { fetchSkills } from '../utils/fetchSkills'
 import { fetchSocials } from '../utils/fetchSocials'
-import { fetchProjects } from '../utils/fetchProjects';
+import { fetchProjects } from '../utils/fetchProjects'
 
 
 
@@ -111,6 +111,5 @@ export const getStaticProps: GetStaticProps<APIProps> = async () => {
       projects,
       socials
     },
-    revalidate: 10000,
   }
 }
