@@ -130,6 +130,6 @@ export const getStaticProps: GetStaticProps<APIProps> = async () => {
       projects,
       socials
     },
-    revalidate: 10000,
+    revalidate: 1000000,
   }
 }
