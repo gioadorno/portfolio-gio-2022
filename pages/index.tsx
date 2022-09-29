@@ -96,26 +96,7 @@ const Home = ({ pageInfo, experiences, skills, socials, projects }: APIProps) =>
 export default Home
 
 
-export const getServerSideProps: GetServerSideProps<APIProps> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo();
-  const experiences: Experience[] = await fetchExperiences();
-  const skills: Skill[] = await fetchSkills();
-  const projects: Project[] = await fetchProjects();
-  const socials: Social[] = await fetchSocials();
-
-  return {
-    props: {
-      pageInfo,
-      experiences,
-      skills,
-      projects,
-      socials
-    },
-    // revalidate: 10,
-  }
-}
-
-// export const getStaticProps: GetStaticProps<APIProps> = async () => {
+// export const getServerSideProps: GetServerSideProps<APIProps> = async () => {
 //   const pageInfo: PageInfo = await fetchPageInfo();
 //   const experiences: Experience[] = await fetchExperiences();
 //   const skills: Skill[] = await fetchSkills();
@@ -130,6 +111,25 @@ export const getServerSideProps: GetServerSideProps<APIProps> = async () => {
 //       projects,
 //       socials
 //     },
-//     revalidate: 10000,
+//     // revalidate: 10,
 //   }
 // }
+
+export const getStaticProps: GetStaticProps<APIProps> = async () => {
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const experiences: Experience[] = await fetchExperiences();
+  const skills: Skill[] = await fetchSkills();
+  const projects: Project[] = await fetchProjects();
+  const socials: Social[] = await fetchSocials();
+
+  return {
+    props: {
+      pageInfo,
+      experiences,
+      skills,
+      projects,
+      socials
+    },
+    revalidate: 10000,
+  }
+}
