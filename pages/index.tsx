@@ -43,7 +43,7 @@ const Home = ({ pageInfo, experiences, skills, socials, projects }: APIProps) =>
 
 
   return (
-    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll z-0 overflow-y-scroll overflow-x-hidden scrollbar-track-slate-300/20 scrollbar-thumb-[#e9bd5dc7] scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thin'>
+    <div className='bg-[rgb(36,36,36)] scroll-smooth text-white h-screen snap-y snap-mandatory overflow-scroll z-0 overflow-y-scroll overflow-x-hidden scrollbar-track-slate-300/20 scrollbar-thumb-[#e9bd5dc7] scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thin'>
       <Head>
         <title>{pageInfo?.name} Portfolio</title>
         <meta name="description" content="Portfolio of Giovanni Adorno" />
