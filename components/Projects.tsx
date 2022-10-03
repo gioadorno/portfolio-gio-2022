@@ -45,7 +45,7 @@ const Projects = ({projects}: Props) => {
                     }}
                     viewport={{ once: true }}
                     src={urlFor(project?.image).url()} alt="" 
-                    className='object-contain w-[1100px] h-[600px] cursor-pointer hover:brightness-90 hover:opacity-80'
+                    className='object-contain w-[1000px] h-[500px] cursor-pointer hover:brightness-90 hover:opacity-80'
                     />
                 </Link>
                 <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
